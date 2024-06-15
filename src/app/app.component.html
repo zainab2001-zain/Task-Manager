@@ -1,0 +1,50 @@
+<div class="container">
+  <header>
+    <h1>Task Manager</h1>
+  </header>
+
+  <main>
+    <form (ngSubmit)="addTask()">
+      <div>
+        <label for="title">Title:</label>
+        <input id="title" [(ngModel)]="newTask.title" name="title" required>
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" [(ngModel)]="newTask.description" name="description"></textarea>
+      </div>
+      <div>
+        <label for="dueDate">Due Date:</label>
+        <input id="dueDate" type="date" [(ngModel)]="newTask.dueDate" name="dueDate">
+      </div>
+      <div>
+        <label for="status">Status:</label>
+        <select id="status" [(ngModel)]="newTask.status" name="status">
+          <option value="Pending">Pending</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </div>
+      <button type="submit">{{ isEditing ? 'Update' : 'Add' }} Task</button>
+      <button type="button" (click)="resetForm()">Clear</button>
+    </form>
+
+    <div *ngIf="tasks.length > 0">
+      <h2>Your Tasks</h2>
+      <div *ngFor="let task of tasks" class="task-item">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+        <p>Due: {{ task.dueDate | date }}</p>
+        <p>Status: {{ task.status }}</p>
+        <button class="editbtn" (click)="editTask(task)">Edit</button>
+        <button (click)="deleteTask(task.id)">Delete</button>
+      </div>
+    </div>
+    <div *ngIf="tasks.length === 0">
+      <p>No tasks available.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Task Manager</p>
+  </footer>
+</div>

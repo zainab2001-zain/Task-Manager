@@ -1,0 +1,124 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #315351;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    max-width: 800px;
+    margin:0 auto;
+    padding:1rem;
+    background-color: #c978c9;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+header h1{
+    color:#333;
+    margin:0;
+    font-size: 2.5 rem;
+}
+form{
+display: flex;
+flex-direction: column;
+gap:1rem;
+margin-bottom: 2rem;;
+padding: 1rem;
+background-color: #a562a5;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+form div{
+    display: flex;
+    flex-direction: column;
+}
+form label{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color:#381047;
+}
+form input,
+form textarea,
+form select{
+    padding: 0.5rem;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+form button{
+    padding: 0.5rem 1rem;
+    border:none;
+    border-radius: 5px;
+    background-color: #420e22;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+form button[type="button"]{
+    background-color: #420e22;
+}
+form button:hover{
+    opacity: 0.8;
+}
+.task-item{
+border:1px solid #dac2c2;
+padding: 1rem;
+margin-bottom: 1rem;
+border-radius: 8px;
+background-color: #f9f9f9;
+box-shadow: 3px 2px 1px 0px;
+}
+.task-item h3{
+    margin:0 10 0.5 rem;
+    color:#333;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.task-item p{
+    margin:0.5rem 0;
+    color:#666;
+}
+.task-item button {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  .editbtn{
+    background-color: #007bff;
+    color: white;
+    margin-right: 0.5rem;
+  }
+  
+  .task-item button:last-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .task-item button:hover {
+    opacity: 0.9;
+  }
+footer{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+  }
+@media (max-width: 600px) {
+    .container {
+      padding: 0.5rem;
+    }
+    form {
+        padding: 0.5rem;
+      }
+    .task-item {
+      padding: 0.5rem;
+    }}
